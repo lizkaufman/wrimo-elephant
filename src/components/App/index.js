@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
+import * as DOMPurify from "dompurify";
+
 import TextInput from "../TextInput";
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <TextInput value={text} onChange={setText} />
-      <p>{text}</p>
+      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}></div>
     </div>
   );
 }

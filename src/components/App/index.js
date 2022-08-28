@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./App.css";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+
+import TextInput from "../TextInput";
 
 function App() {
-  const [value, setValue] = useState("");
+  const [text, setText] = useState("");
 
   return (
     <div className="App">
-      <h1>Hello world!</h1>
-      <ReactQuill theme="snow" value={value} onChange={setValue} />
+      <TextInput value={text} onChange={setText} />
+      <p>{text}</p>
     </div>
   );
 }

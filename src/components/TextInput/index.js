@@ -2,7 +2,7 @@ import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import css from "./textInput.module.css";
-import { modules, formats } from "../../libs/quillToolbar";
+import { modules, formats } from "../../libs/config";
 
 function TextInput({ onChange, value }) {
   return (

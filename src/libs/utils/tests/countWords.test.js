@@ -26,16 +26,15 @@ describe("Testing countWords with non-standard strings", () => {
 
   test("correctly counts string with line breaks", () => {
     const testString = `I'm a string, but
-    
-    I have line breaks. Sometimes it's one,
-    
-    
-    but sometimes it's more!
-    
-    
-    
-    
-    Look at all those lovely line breaks.`;
+I have line breaks. Sometimes it's one,
+
+
+but sometimes it's more!
+
+
+
+
+Look at all those lovely line breaks.`;
     const actual = countWords(testString);
     const expected = 22;
     expect(actual).toBe(expected);

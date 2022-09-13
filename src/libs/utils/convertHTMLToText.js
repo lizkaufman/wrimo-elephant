@@ -1,3 +1,7 @@
 export default function convertHTMLToText(html) {
-  return html.replace(/<[^>]+>/g, "");
+  let text = html;
+  text = text.replace(/<[^>]+>/g, " ");
+  text = text.replace(/\n/g, " ");
+  text = text.replace(/\r/g, " ");
+  return text;
 }

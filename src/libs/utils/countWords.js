@@ -5,5 +5,5 @@ export default function countWords(string) {
   text = convertHTMLToText(string);
   let splitText = text.split(" ");
   splitText = splitText.filter((word) => (word === "" ? false : true));
-  return splitText.length;
+  // return splitText.length;
 }

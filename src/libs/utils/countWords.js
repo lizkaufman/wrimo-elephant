@@ -6,6 +6,7 @@ export default function countWords(string) {
   if (string[0] === "<") {
     text = convertHTMLToText(string);
   }
+  console.log({ converted: text });
 
   let splitText = text.split(" ");
   console.log(splitText);

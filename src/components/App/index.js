@@ -12,7 +12,6 @@ function App() {
   useEffect(() => {
     const count = countWords(text);
     setCurrentCount(count);
-    //FIXME: count displaying as one behind until you start the next word...? But only after line breaks!
   }, [text]);
 
   return (
